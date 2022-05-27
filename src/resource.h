@@ -124,7 +124,7 @@ namespace cg
 				static_cast<float>(b);
 			}
 			/ 255.f;
-		};
+		}
 		unsigned char r;
 		unsigned char g;
 		unsigned char b;
