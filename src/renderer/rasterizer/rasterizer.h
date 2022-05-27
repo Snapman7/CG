@@ -53,7 +53,7 @@ namespace cg::renderer
 			std::shared_ptr<resource<RT>> in_render_target,
 			std::shared_ptr<resource<float>> in_depth_buffer)
 	{
-		if (render_target) {
+		if (!render_target) {
 			render_target = in_render_target;
 		}
 		// TODO: Lab 1.06. Adjust set_render_target, and clear_render_target methods of cg::renderer::rasterizer class to consume a depth buffer

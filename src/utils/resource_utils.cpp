@@ -26,5 +26,5 @@ void cg::utils::save_resource(
 	std::string view_command("start ");
 	view_command.append(filepath.string());
 
-	std::system(view_command.c_str());
+//	std::system(view_command.c_str());
 }
