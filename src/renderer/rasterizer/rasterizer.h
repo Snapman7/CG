@@ -6,6 +6,7 @@
 #include <iostream>
 #include <linalg.h>
 #include <memory>
+#include <float.h>
 
 
 using namespace linalg::aliases;

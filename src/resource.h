@@ -115,16 +115,13 @@ namespace cg
 			out.b = static_cast<int>(preprocessed.z);
 			return out;
 		};
-		float3 to_float3() const
-		{
-			return float3
-			{
-				static_cast<float>(r);
-				static_cast<float>(g);
-				static_cast<float>(b);
-			}
-			/ 255.f;
-		}
+		float3 to_float3() const {
+			return float3{
+				static_cast<float>(r),
+				static_cast<float>(g),
+				static_cast<float>(b),
+			} / 255.f;
+		};
 		unsigned char r;
 		unsigned char g;
 		unsigned char b;
