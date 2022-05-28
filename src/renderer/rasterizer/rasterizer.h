@@ -113,7 +113,7 @@ namespace cg::renderer
 					index_buffer->item(vertex_id++));
 
 			for (auto& vertex: vertices) {
-				float4 coords{vertex.x, vertex.y, vertex.z, 1};
+				float4 coords{vertex.x, vertex.y, vertex.z, 1.f};
 				auto processed_vertex = vertex_shader(coords, vertex);
 
 				vertex.x = processed_vertex.first.x / processed_vertex.first.w;

@@ -29,12 +29,12 @@ void cg::world::camera::set_theta(float in_theta)
 
 void cg::world::camera::set_phi(float in_phi)
 {
-	phi = in_phi * static_cast<float>(M_PI) * 180.f;
+	phi = in_phi * static_cast<float>(M_PI) / 180.f;
 }
 
 void cg::world::camera::set_angle_of_view(float in_aov)
 {
-	angle_of_view = in_aov * static_cast<float>(M_PI) * 180.f;
+	angle_of_view = in_aov * static_cast<float>(M_PI) / 180.f;
 }
 
 void cg::world::camera::set_height(float in_height)
