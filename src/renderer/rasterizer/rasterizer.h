@@ -95,7 +95,6 @@ namespace cg::renderer
 	template<typename VB, typename RT>
 	inline void rasterizer<VB, RT>::draw(size_t num_vertexes, size_t vertex_offset)
 	{
-		// TODO: Lab 1.04. Add `IA` and `Vertex shader` stages to `draw` method of `cg::renderer::rasterizer`
 		size_t vertex_id = vertex_offset;
 		while (vertex_id < vertex_offset + num_vertexes) {
 			std::vector<VB> vertices(3);
@@ -127,8 +126,7 @@ namespace cg::renderer
 	inline float
 	rasterizer<VB, RT>::edge_function(float2 a, float2 b, float2 c)
 	{
-		// TODO: Lab 1.05. Implement `cg::renderer::rasterizer::edge_function` method
-
+		return (c.x - a.x) * (b.y - a.y) - (c.y - a.y) * (b.x - a.x);
 	}
 
 	template<typename VB, typename RT>
