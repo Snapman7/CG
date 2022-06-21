@@ -5,7 +5,7 @@
 #include <iostream>
 #include <linalg.h>
 #include <memory>
-//#include <omp.h>
+#include <omp.h>
 #include <random>
 
 using namespace linalg::aliases;
@@ -55,8 +55,8 @@ namespace cg::renderer
 			const VB& vertex_a, const VB& vertex_b, const VB& vertex_c)
 	{
 		a = float3{vertex_a.x, vertex_a.y, vertex_a.z};
-        b = float3{vertex_b.x, vertex_c.y, vertex_b.z};
-        c = float3{vertex_c.x, vertex_b.y, vertex_c.z};
+        b = float3{vertex_b.x, vertex_b.y, vertex_b.z};
+        c = float3{vertex_c.x, vertex_c.y, vertex_c.z};
 
 		ba = b - a;
 		ca - c - a;
