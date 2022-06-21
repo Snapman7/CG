@@ -5,7 +5,7 @@
 #include <iostream>
 #include <linalg.h>
 #include <memory>
-#include <omp.h>
+//#include <omp.h>
 #include <random>
 
 using namespace linalg::aliases;
