@@ -59,7 +59,7 @@ namespace cg::renderer
         c = float3{vertex_c.x, vertex_c.y, vertex_c.z};
 
 		ba = b - a;
-		ca - c - a;
+		ca = c - a;
 
 		na = float3{vertex_a.nx, vertex_a.ny, vertex_a.nz};
         nb = float3{vertex_b.nx, vertex_b.ny, vertex_b.nz};
