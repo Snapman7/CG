@@ -230,7 +230,7 @@ namespace cg::renderer
 
 		if (closest_hit_payload.t < max_t) {
 			if (closest_hit_shader) {
-				return closest_hit_shader(ray, closest_hit_payload, closest_triangle, depth);
+				return closest_hit_shader(ray, closest_hit_payload, *closest_triangle, depth);
 			}
 		}
 
