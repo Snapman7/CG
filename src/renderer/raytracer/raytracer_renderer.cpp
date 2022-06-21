@@ -104,5 +104,4 @@ void cg::renderer::ray_tracing_renderer::render()
 	std::cout << "Raytracing took " << raytracing_duration.count() << " ms\n";
 
 	cg::utils::save_resource(*render_target, settings->result_path);
-	// TODO: Lab 2.05. Adjust ray_tracing_renderer class to build the acceleration structure
 }
