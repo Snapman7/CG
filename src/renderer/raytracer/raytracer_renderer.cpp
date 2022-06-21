@@ -46,7 +46,6 @@ void cg::renderer::ray_tracing_renderer::update() {}
 
 void cg::renderer::ray_tracing_renderer::render()
 {
-	// TODO: Lab 2.01. Implement miss_shader, image clearing, calling ray_generation, and saving in ray_tracing_renderer class
 	raytracer->clear_render_target({0, 0, 0});
 	raytracer->miss_shader = [](const ray& ray) {
         payload payload{};
