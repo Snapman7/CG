@@ -157,7 +157,13 @@ void cg::renderer::dx12_renderer::create_command_allocators()
 
 void cg::renderer::dx12_renderer::create_command_list()
 {
-	// TODO Lab 3.06. Create command allocators and a command list
+    THROW_IF_FAILED(device->CreateCommandList(
+			0,
+			D3D12_COMMAND_LIST_TYPE_DIRECT,
+			command_allocators[0].Get(),
+			pipeline_state.Get(),
+			IID_PPV_ARGS(&command_list)
+    ))
 }
 
 
