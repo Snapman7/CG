@@ -417,6 +417,9 @@ void cg::renderer::dx12_renderer::load_assets()
 {
 	create_root_signature(nullptr, 0);
 	create_pso("shaders.hlsl");
+	create_command_allocators();
+	create_command_list();
+	command_list->Close();
 
 	vertex_buffers.resize(model->get_vertex_buffers().size());
 	vertex_buffer_views.resize(model->get_vertex_buffers().size());
