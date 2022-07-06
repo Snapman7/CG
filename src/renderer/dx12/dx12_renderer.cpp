@@ -147,7 +147,12 @@ void cg::renderer::dx12_renderer::create_depth_buffer()
 
 void cg::renderer::dx12_renderer::create_command_allocators()
 {
-	// TODO Lab 3.06. Create command allocators and a command list
+	for (auto& command_allocator : command_allocators) {
+		THROW_IF_FAILED(device->CreateCommandAllocator(
+				D3D12_COMMAND_LIST_TYPE_DIRECT,
+				IID_PPV_ARGS(&command_allocator)
+				))
+	}
 }
 
 void cg::renderer::dx12_renderer::create_command_list()
